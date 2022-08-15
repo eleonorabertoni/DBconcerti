@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 15.5" name="DataClassesConcerti">
+  <DataContextMoniker Name="/DataClassesConcertiDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7402eb3b-5daf-4a94-bc0d-2ba3ee1e3b16" absoluteBounds="0.75, 4.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/ARTISTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="315f40b6-be38-4af8-b8ce-5eb037d92204" absoluteBounds="0.765, 4.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f83d35d-523d-4a9f-be71-940a552f5a48" absoluteBounds="9, 8.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/BIGLIETTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44663651-1ad5-4d45-8115-c88b02e5f376" absoluteBounds="9.015, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba4d0de1-c623-4569-bbaf-aaa6b9418acd" absoluteBounds="3.5, 10.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/BRANO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fb7bbce-5248-4209-bf67-eee68ddf87c6" absoluteBounds="3.515, 11.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2447e1d1-13e0-4cc4-9218-43128ba51f28" absoluteBounds="0.75, 1, 2, 1.5785953776041668">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/CITTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b55c1928-e13b-425c-bb70-67b5d204d250" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="abc2bfd6-51f7-4389-b313-8c2d4c198900" absoluteBounds="9, 11.125, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/ESIBIZIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bda66be-4b11-4a5b-a9dd-5129940f9c3d" absoluteBounds="9.015, 11.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c20827ce-1767-471a-8618-b6d4663d956e" absoluteBounds="0.75, 7.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="125e4dca-02fc-455f-b5b7-bbee1a7a41af" absoluteBounds="0.765, 8.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="934a52c5-b078-444b-907d-eecabf147284" absoluteBounds="3.5, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/LOCATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8982cfff-4778-4469-a223-b75644478aef" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6203e8f-fd2e-41fe-a531-646edf2b7b47" absoluteBounds="3.5, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/PARTECIPAZIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2accf9f7-cfa7-40d5-aca4-47a57d998b64" absoluteBounds="3.515, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d0a1257-4a0b-463c-98ee-f3fec2ddf095" absoluteBounds="6.25, 5.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/POSTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3d17784-2d1d-4f7d-87f1-1490cfc8e5b1" absoluteBounds="6.265, 6.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74a569cc-3290-4783-bf94-97d2d578cbad" absoluteBounds="9, 5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/PREZZO_SETTORE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25dacd99-e483-4139-b031-54217a7af4fa" absoluteBounds="9.015, 5.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07e2ec36-14ba-4b71-bffd-57851788c541" absoluteBounds="6.25, 1.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/SETTORE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5832ec1-9ffb-4f28-98e0-1b2b9da14c18" absoluteBounds="6.265, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33f95160-94a2-4936-a024-2b32b743c83b" absoluteBounds="6.25, 8.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/TAPPA_CONCERTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a833f8e9-9450-40d4-b090-5ebf3ce7d61d" absoluteBounds="6.265, 8.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a320dbc-a2b2-4719-aada-ed0c7672ee9a" absoluteBounds="3.5, 8.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/TOUR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e14a3fa7-9ebc-4bfc-ba7b-4852bb43d185" absoluteBounds="3.515, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3db08180-4abd-4f7b-9236-68fb57758096" absoluteBounds="6.25, 13.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/UTENTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ebcb619-1036-407c-86a8-ddd4079ef863" absoluteBounds="6.265, 13.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a091309-0ca0-41ae-bdb9-59df720e0b3a" absoluteBounds="6.25, 10.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClassesConcertiDataContext/VARIAZIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be4eea5b-9318-4648-bae7-5a80e5bc14a3" absoluteBounds="6.265, 10.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 12.0761946614583); (8.72916666666667 : 12.0761946614583 : JumpStart); (8.89583333333333 : 12.0761946614583 : JumpEnd); (9 : 12.0761946614583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/BRANO/BRANO_ESIBIZIONE" />
+      <nodes>
+        <classShapeMoniker Id="ba4d0de1-c623-4569-bbaf-aaa6b9418acd" />
+        <classShapeMoniker Id="abc2bfd6-51f7-4389-b313-8c2d4c198900" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.94399251302083); (1.75 : 11.5104484049479); (2.19791916666667 : 11.5104484049479 : JumpStart); (2.36458583333333 : 11.5104484049479 : JumpEnd); (3.5 : 11.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA/GRUPPO_ARTISTA_BRANO" />
+      <nodes>
+        <classShapeMoniker Id="c20827ce-1767-471a-8618-b6d4663d956e" />
+        <classShapeMoniker Id="ba4d0de1-c623-4569-bbaf-aaa6b9418acd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 8.94399251302083); (2.2812525 : 12.7732975260417); (9 : 12.7732975260417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA/GRUPPO_ARTISTA_ESIBIZIONE" />
+      <nodes>
+        <classShapeMoniker Id="c20827ce-1767-471a-8618-b6d4663d956e" />
+        <classShapeMoniker Id="abc2bfd6-51f7-4389-b313-8c2d4c198900" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.5 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/CITTA/CITTA_LOCATION" />
+      <nodes>
+        <classShapeMoniker Id="2447e1d1-13e0-4cc4-9218-43128ba51f28" />
+        <classShapeMoniker Id="934a52c5-b078-444b-907d-eecabf147284" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.11140055338542); (3.5 : 6.11140055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/ARTISTA/ARTISTA_PARTECIPAZIONE" />
+      <nodes>
+        <classShapeMoniker Id="7402eb3b-5daf-4a94-bc0d-2ba3ee1e3b16" />
+        <classShapeMoniker Id="c6203e8f-fd2e-41fe-a531-646edf2b7b47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.75091745577925); (3.125 : 7.37591745577925); (3.125 : 7.31990996880008); (3.50091745577925 : 6.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA/GRUPPO_ARTISTA_PARTECIPAZIONE" />
+      <nodes>
+        <classShapeMoniker Id="c20827ce-1767-471a-8618-b6d4663d956e" />
+        <classShapeMoniker Id="c6203e8f-fd2e-41fe-a531-646edf2b7b47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.45359537760417); (8.625 : 7.82859537760417); (8.625 : 9.01044840494792); (8.72916666666667 : 9.01044840494792 : JumpStart); (8.89583333333333 : 9.01044840494792 : JumpEnd); (9 : 9.01044840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/POSTO/POSTO_BIGLIETTO" />
+      <nodes>
+        <classShapeMoniker Id="3d0a1257-4a0b-463c-98ee-f3fec2ddf095" />
+        <classShapeMoniker Id="5f83d35d-523d-4a9f-be71-940a552f5a48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 2.69399251302083); (7.25 : 5.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/SETTORE/SETTORE_POSTO" />
+      <nodes>
+        <classShapeMoniker Id="07e2ec36-14ba-4b71-bffd-57851788c541" />
+        <classShapeMoniker Id="3d0a1257-4a0b-463c-98ee-f3fec2ddf095" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.09699625651042); (10 : 2.09699625651042); (10 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/SETTORE/SETTORE_PREZZO_SETTORE" />
+      <nodes>
+        <classShapeMoniker Id="07e2ec36-14ba-4b71-bffd-57851788c541" />
+        <classShapeMoniker Id="74a569cc-3290-4783-bf94-97d2d578cbad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.09699625651042); (6.25 : 2.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/LOCATION/LOCATION_SETTORE" />
+      <nodes>
+        <classShapeMoniker Id="934a52c5-b078-444b-907d-eecabf147284" />
+        <classShapeMoniker Id="07e2ec36-14ba-4b71-bffd-57851788c541" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.44837117513021); (8.72916666666667 : 9.44837117513021 : JumpStart); (8.89583333333333 : 9.44837117513021 : JumpEnd); (9 : 9.44837117513021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/TAPPA_CONCERTO/TAPPA_CONCERTO_BIGLIETTO" />
+      <nodes>
+        <classShapeMoniker Id="33f95160-94a2-4936-a024-2b32b743c83b" />
+        <classShapeMoniker Id="5f83d35d-523d-4a9f-be71-940a552f5a48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.7612939453125); (8.625 : 10.1362939453125); (8.625 : 11.5693453307292); (8.72916666666667 : 11.5693453307292 : JumpStart); (8.89583333333333 : 11.5693453307292 : JumpEnd); (9 : 11.5693453307292)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/TAPPA_CONCERTO/TAPPA_CONCERTO_ESIBIZIONE" />
+      <nodes>
+        <classShapeMoniker Id="33f95160-94a2-4936-a024-2b32b743c83b" />
+        <classShapeMoniker Id="abc2bfd6-51f7-4389-b313-8c2d4c198900" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.4368490375601); (8.56607443490112 : 8.12077460265898 : JumpStart); (8.68392556509888 : 8.00292347246122 : JumpEnd); (8.8125 : 7.8743490375601); (8.8125 : 5.98159912109375); (9 : 5.98159912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/TAPPA_CONCERTO/TAPPA_CONCERTO_PREZZO_SETTORE" />
+      <nodes>
+        <classShapeMoniker Id="33f95160-94a2-4936-a024-2b32b743c83b" />
+        <classShapeMoniker Id="74a569cc-3290-4783-bf94-97d2d578cbad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.06814697265625); (6.25 : 9.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/TOUR/TOUR_TAPPA_CONCERTO" />
+      <nodes>
+        <classShapeMoniker Id="2a320dbc-a2b2-4719-aada-ed0c7672ee9a" />
+        <classShapeMoniker Id="33f95160-94a2-4936-a024-2b32b743c83b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.59699625651042); (3.5 : 8.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA/GRUPPO_ARTISTA_TOUR" />
+      <nodes>
+        <classShapeMoniker Id="c20827ce-1767-471a-8618-b6d4663d956e" />
+        <classShapeMoniker Id="2a320dbc-a2b2-4719-aada-ed0c7672ee9a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 13.3119152522536); (8.8125 : 12.7494152522536); (8.8125 : 8.53647220247396); (9 : 8.53647220247396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/UTENTE/UTENTE_BIGLIETTO" />
+      <nodes>
+        <classShapeMoniker Id="3db08180-4abd-4f7b-9236-68fb57758096" />
+        <classShapeMoniker Id="5f83d35d-523d-4a9f-be71-940a552f5a48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.1594962565104); (6.25 : 11.1594962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/BRANO/BRANO_VARIAZIONE" />
+      <nodes>
+        <classShapeMoniker Id="ba4d0de1-c623-4569-bbaf-aaa6b9418acd" />
+        <classShapeMoniker Id="9a091309-0ca0-41ae-bdb9-59df720e0b3a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 8.94399251302083); (1.2187475 : 10.53125); (1.66666666666667 : 10.53125 : JumpStart); (1.83333333333333 : 10.53125 : JumpEnd); (2.19791916666667 : 10.53125 : JumpStart); (2.36458583333333 : 10.53125 : JumpEnd); (6.25 : 10.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesConcertiDataContext/GRUPPO_ARTISTA/GRUPPO_ARTISTA_VARIAZIONE" />
+      <nodes>
+        <classShapeMoniker Id="c20827ce-1767-471a-8618-b6d4663d956e" />
+        <classShapeMoniker Id="9a091309-0ca0-41ae-bdb9-59df720e0b3a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

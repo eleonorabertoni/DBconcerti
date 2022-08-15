@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="concerti" Class="DataClassesConcertiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=concerti;Integrated Security=True" SettingsObjectName="progettoDB.Properties.Settings" SettingsPropertyName="concertiConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ARTISTA" Member="ARTISTA">
+    <Type Name="ARTISTA">
+      <Column Name="codArtista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nomeArte" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="inizioAttivita" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipoArtista" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="strumento" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="fineAttivita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ARTISTA_PARTECIPAZIONE" Member="PARTECIPAZIONE" ThisKey="codArtista" OtherKey="codArtista" Type="PARTECIPAZIONE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIGLIETTO" Member="BIGLIETTO">
+    <Type Name="BIGLIETTO">
+      <Column Name="codBiglietto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codPosto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codUtente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codTour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="POSTO_BIGLIETTO" Member="POSTO" ThisKey="codPosto" OtherKey="codPosto" Type="POSTO" IsForeignKey="true" />
+      <Association Name="TAPPA_CONCERTO_BIGLIETTO" Member="TAPPA_CONCERTO" ThisKey="codTour,data" OtherKey="codTour,data" Type="TAPPA_CONCERTO" IsForeignKey="true" />
+      <Association Name="UTENTE_BIGLIETTO" Member="UTENTE" ThisKey="codUtente" OtherKey="codUtente" Type="UTENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BRANO" Member="BRANO">
+    <Type Name="BRANO">
+      <Column Name="codBrano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="testo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="anno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="titolo" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BRANO_ESIBIZIONE" Member="ESIBIZIONE" ThisKey="codBrano" OtherKey="codBrano" Type="ESIBIZIONE" />
+      <Association Name="BRANO_VARIAZIONE" Member="VARIAZIONE" ThisKey="codBrano" OtherKey="codBrano" Type="VARIAZIONE" />
+      <Association Name="GRUPPO_ARTISTA_BRANO" Member="GRUPPO_ARTISTA" ThisKey="codGruppo" OtherKey="codGruppo" Type="GRUPPO_ARTISTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CITTA" Member="CITTA">
+    <Type Name="CITTA">
+      <Column Name="codCitta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeCitta" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="regione" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="provincia" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CITTA_LOCATION" Member="LOCATION" ThisKey="codCitta" OtherKey="codCitta" Type="LOCATION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESIBIZIONE" Member="ESIBIZIONE">
+    <Type Name="ESIBIZIONE">
+      <Column Name="codTour" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codBrano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ordine" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="link_video" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Association Name="BRANO_ESIBIZIONE" Member="BRANO" ThisKey="codBrano" OtherKey="codBrano" Type="BRANO" IsForeignKey="true" />
+      <Association Name="GRUPPO_ARTISTA_ESIBIZIONE" Member="GRUPPO_ARTISTA" ThisKey="codGruppo" OtherKey="codGruppo" Type="GRUPPO_ARTISTA" IsForeignKey="true" />
+      <Association Name="TAPPA_CONCERTO_ESIBIZIONE" Member="TAPPA_CONCERTO" ThisKey="codTour,data" OtherKey="codTour,data" Type="TAPPA_CONCERTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GRUPPO_ARTISTA" Member="GRUPPO_ARTISTA">
+    <Type Name="GRUPPO_ARTISTA">
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeGruppo" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="GRUPPO_ARTISTA_BRANO" Member="BRANO" ThisKey="codGruppo" OtherKey="codGruppo" Type="BRANO" />
+      <Association Name="GRUPPO_ARTISTA_ESIBIZIONE" Member="ESIBIZIONE" ThisKey="codGruppo" OtherKey="codGruppo" Type="ESIBIZIONE" />
+      <Association Name="GRUPPO_ARTISTA_PARTECIPAZIONE" Member="PARTECIPAZIONE" ThisKey="codGruppo" OtherKey="codGruppo" Type="PARTECIPAZIONE" />
+      <Association Name="GRUPPO_ARTISTA_TOUR" Member="TOUR" ThisKey="codGruppo" OtherKey="codGruppo" Type="TOUR" />
+      <Association Name="GRUPPO_ARTISTA_VARIAZIONE" Member="VARIAZIONE" ThisKey="codGruppo" OtherKey="codGruppo" Type="VARIAZIONE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOCATION" Member="LOCATION">
+    <Type Name="LOCATION">
+      <Column Name="codLocation" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeLocation" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="via" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numeroCivico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codCitta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LOCATION_SETTORE" Member="SETTORE" ThisKey="codLocation" OtherKey="codLocation" Type="SETTORE" />
+      <Association Name="CITTA_LOCATION" Member="CITTA" ThisKey="codCitta" OtherKey="codCitta" Type="CITTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PARTECIPAZIONE" Member="PARTECIPAZIONE">
+    <Type Name="PARTECIPAZIONE">
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codArtista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ARTISTA_PARTECIPAZIONE" Member="ARTISTA" ThisKey="codArtista" OtherKey="codArtista" Type="ARTISTA" IsForeignKey="true" />
+      <Association Name="GRUPPO_ARTISTA_PARTECIPAZIONE" Member="GRUPPO_ARTISTA" ThisKey="codGruppo" OtherKey="codGruppo" Type="GRUPPO_ARTISTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POSTO" Member="POSTO">
+    <Type Name="POSTO">
+      <Column Name="codPosto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numPosto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nomeSettore" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="POSTO_BIGLIETTO" Member="BIGLIETTO" ThisKey="codPosto" OtherKey="codPosto" Type="BIGLIETTO" />
+      <Association Name="SETTORE_POSTO" Member="SETTORE" ThisKey="codLocation,nomeSettore" OtherKey="codLocation,nomeSettore" Type="SETTORE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PREZZO_SETTORE" Member="PREZZO_SETTORE">
+    <Type Name="PREZZO_SETTORE">
+      <Column Name="codTour" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codLocation" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeSettore" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="prezzo" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="numLiberi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SETTORE_PREZZO_SETTORE" Member="SETTORE" ThisKey="codLocation,nomeSettore" OtherKey="codLocation,nomeSettore" Type="SETTORE" IsForeignKey="true" />
+      <Association Name="TAPPA_CONCERTO_PREZZO_SETTORE" Member="TAPPA_CONCERTO" ThisKey="codTour,data" OtherKey="codTour,data" Type="TAPPA_CONCERTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SETTORE" Member="SETTORE">
+    <Type Name="SETTORE">
+      <Column Name="codLocation" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeSettore" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SETTORE_POSTO" Member="POSTO" ThisKey="codLocation,nomeSettore" OtherKey="codLocation,nomeSettore" Type="POSTO" />
+      <Association Name="SETTORE_PREZZO_SETTORE" Member="PREZZO_SETTORE" ThisKey="codLocation,nomeSettore" OtherKey="codLocation,nomeSettore" Type="PREZZO_SETTORE" />
+      <Association Name="LOCATION_SETTORE" Member="LOCATION" ThisKey="codLocation" OtherKey="codLocation" Type="LOCATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAPPA_CONCERTO" Member="TAPPA_CONCERTO">
+    <Type Name="TAPPA_CONCERTO">
+      <Column Name="codTour" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ora" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Association Name="TAPPA_CONCERTO_BIGLIETTO" Member="BIGLIETTO" ThisKey="codTour,data" OtherKey="codTour,data" Type="BIGLIETTO" />
+      <Association Name="TAPPA_CONCERTO_ESIBIZIONE" Member="ESIBIZIONE" ThisKey="codTour,data" OtherKey="codTour,data" Type="ESIBIZIONE" />
+      <Association Name="TAPPA_CONCERTO_PREZZO_SETTORE" Member="PREZZO_SETTORE" ThisKey="codTour,data" OtherKey="codTour,data" Type="PREZZO_SETTORE" />
+      <Association Name="TOUR_TAPPA_CONCERTO" Member="TOUR" ThisKey="codTour" OtherKey="codTour" Type="TOUR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOUR" Member="TOUR">
+    <Type Name="TOUR">
+      <Column Name="codTour" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="titolo" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descrizione" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TOUR_TAPPA_CONCERTO" Member="TAPPA_CONCERTO" ThisKey="codTour" OtherKey="codTour" Type="TAPPA_CONCERTO" />
+      <Association Name="GRUPPO_ARTISTA_TOUR" Member="GRUPPO_ARTISTA" ThisKey="codGruppo" OtherKey="codGruppo" Type="GRUPPO_ARTISTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UTENTE" Member="UTENTE">
+    <Type Name="UTENTE">
+      <Column Name="codUtente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mail" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numeroTelefono" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="UTENTE_BIGLIETTO" Member="BIGLIETTO" ThisKey="codUtente" OtherKey="codUtente" Type="BIGLIETTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VARIAZIONE" Member="VARIAZIONE">
+    <Type Name="VARIAZIONE">
+      <Column Name="codBrano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codGruppo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="BRANO_VARIAZIONE" Member="BRANO" ThisKey="codBrano" OtherKey="codBrano" Type="BRANO" IsForeignKey="true" />
+      <Association Name="GRUPPO_ARTISTA_VARIAZIONE" Member="GRUPPO_ARTISTA" ThisKey="codGruppo" OtherKey="codGruppo" Type="GRUPPO_ARTISTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
